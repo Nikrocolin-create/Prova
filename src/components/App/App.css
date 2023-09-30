@@ -1,0 +1,17 @@
+.circle-background {
+    fill:none;
+    stroke: #c1c1c1
+}
+.circle-progress {
+    fill:none;
+    stroke: #ddd
+}
+
+.circle-progress {
+    fill:none;
+    stroke: rgb(57, 204, 57)
+}
+.circle-path {
+    fill:none;
+    stroke: rgb(200, 200, 200)
+}

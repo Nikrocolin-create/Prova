@@ -1,0 +1,23 @@
+.rateButtonActive,
+.rateButtonPassive{
+    text-align: center;
+    align-items: center;
+    margin:0.25em;
+    height:2em;
+    width:2em;
+}
+
+.rateButtonActive{
+    border: 2px solid green;
+    background-color: green;
+    color:white;
+}
+.rateButtonPassive{
+    border: 1px solid black;
+}
+.rateButtonActive:hover,
+.rateButtonPassive:hover{
+    border: 2px solid green;
+    background-color: green;
+    color:white;
+}

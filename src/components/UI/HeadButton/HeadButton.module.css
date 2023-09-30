@@ -1,0 +1,7 @@
+.headLink {
+    font:bold;
+    color: white;
+}
+a:hover{
+    background-color:rgb(255, 255, 255);
+}

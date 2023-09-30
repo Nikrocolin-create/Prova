@@ -1,0 +1,35 @@
+.halfScreen{
+    height:90%;
+    width:50%;
+}
+
+.wholePost {
+    display:flex;
+    flex-direction:row;
+    height:100%; 
+    width:100%;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+.imgClass {
+    height:100%; 
+    width:100%;
+    objectFit:contain 
+}
+.gridContainer {
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+.postInfo {
+    grid-column: 1;
+    grid-row:1
+}
+.postPicture {
+    grid-column: 2;
+    height: 100%;
+    width: 100%;
+    grid-row:1
+}

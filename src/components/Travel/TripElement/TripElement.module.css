@@ -1,0 +1,15 @@
+.main {
+    margin: 1em;
+    height: 250px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px #aaaaaa;
+}
+
+.imgPart {
+    height: 70%;
+    width: 100%;
+    background-color: black;
+}

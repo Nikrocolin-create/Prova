@@ -1,0 +1,37 @@
+.postInfo{
+    background-color: white;
+    height:100%;
+    width:100%;
+    text-align: center;
+}
+
+.dateSectionStyle {
+    color: rgb(46, 49, 47);
+    padding: 1em; 
+    font-size: 15;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.headerStyle {
+    color: rgb(46, 49, 47);
+    font-size: 40;
+    font-weight: bold;
+    text-align: center;
+    width:100%;
+    text-transform: uppercase;
+}
+.breakStyle {
+    padding-left: 30em;
+    padding-right: 30em;
+    color: rgb(46, 49, 47);
+    width: 100%;
+    border-top: 1em solid rgb(46, 49, 47);
+}
+
+.descriptionStyle {
+    width:100%;
+    text-align: center;
+    padding: 5em;
+    font-size: 20;
+}
