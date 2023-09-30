@@ -3,34 +3,36 @@ import classes from "./Dashboard.module.css"
 import LikelyToRecommend from './LikelyToRecomend/LikelyToRecommend';
 import Average from './Average/Average';
 import TrendChart from './TrendChart/TrendChart';
-import { Chart } from "react-google-charts";
+import PieChartYear from './PieChartYear/PieChartYear';
+import Satisfied from './Satisfied/Satisfied';
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
 
 export default function Dashboard() {
-  const data = [
-    ["Task", "Hours per Day"],
-    ["Work", 11],
-    ["Eat", 2],
-    ["Commute", 2],
-    ["Watch TV", 2],
-    ["Sleep", 7],
-  ];
-  
-  const options = {
-    legend: "bottom"
-  };
+  let MOCK_DATA = [
+    {date:"", satisfaction:5, recommend:true,id:"1"},
+    {date:"", satisfaction:4, recommend:true,id:"2"},
+    {date:"", satisfaction:6, recommend:true,id:"3"},
+    {date:"", satisfaction:5, recommend:false,id:"4"},
+    {date:"", satisfaction:5, recommend:true,id:"5"},
+    {date:"", satisfaction:5, recommend:true,id:"6"},
+    {date:"", satisfaction:10, recommend:false,id:"7"},
+    {date:"", satisfaction:5, recommend:true,id:"8"},
+    {date:"", satisfaction:9, recommend:true,id:"9"},
+    {date:"", satisfaction:5, recommend:true,id:"10"}
+  ]
+  for (let i = 0; i < 10; i++) {
+    MOCK_DATA[i]["clientId"] = getRandomInt(10)
+  }
+
   return(
 <div className={classes.gridContainer}>
-<div className={classes.chartContainer + " " + classes.chart1}><LikelyToRecommend/> </div>
-<div className={classes.chartContainer + " " + classes.chart2}> </div>
-<div className={classes.chartContainer + " " + classes.chart3}> <Average rating={4.8} responses="267"/></div>
-<div className={classes.chartContainer + " " + classes.chart4}> 
-<Chart
-    chartType="PieChart"
-    data={data}
-    options={options}
-    width={"100%"}
-    height={"100%"}
-  /></div>
+<div className={classes.chartContainer + " " + classes.chart1}><LikelyToRecommend data={MOCK_DATA}/> </div>
+<div className={classes.chartContainer + " " + classes.chart2}> <Satisfied /> </div>
+<div className={classes.chartContainer + " " + classes.chart3}> <Average data={MOCK_DATA}/></div>
+<div className={classes.chartContainer + " " + classes.chart4}><PieChartYear data={MOCK_DATA}/></div>
 <div className={classes.chartContainer + " " + classes.chart5}><TrendChart/></div>
 </div>
   );

@@ -1,0 +1,12 @@
+.colorFont {
+    padding: 0;
+    font-size: 172px;
+    font-family: "Gill Sans Extrabold";
+    background: linear-gradient(
+        grey 20%,
+        blue 20% 80%,
+        grey 80%
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,7 +1,11 @@
 import React from 'react'
 import classes from "./Average.module.css"
 import "./Average.css"
-function Average({rating, responses}) {
+function Average({data}) {
+  let rating = [...data].reduce((sum, a)=>sum+=Number(a.satisfaction),0) / data.length
+  console.log(data)
+  console.log(rating)
+  let responses = data.length
   return (
     <div style={{padding:"0"}}>
       <h6><b>Average</b></h6>

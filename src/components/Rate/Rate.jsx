@@ -27,9 +27,9 @@ function Rate({currentValue, selectFunc, postId}) {
       .then(data => console.log(data))
   }
   return (
-    <div className={classes.rate}>
-        <div><b>How do you rate this post?</b></div>
-        <div style={{display:"inline-block",width:"25em"}}>
+    <div className={classes.rate} style={{textAlign:"left"}}>
+        <h5><b>How do you rate this post?</b></h5>
+        <div style={{display:"flex",width:"25em",justifyContent:"space-between"}}>
             <div style={{float:"left"}}>Very bad</div>
             <div style={{float:"right"}}>Very good</div>
         </div>

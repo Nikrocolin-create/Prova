@@ -15,21 +15,30 @@
 .imgClass {
     height:100%; 
     width:100%;
-    objectFit:contain 
+    object-fit:contain;
 }
 .gridContainer {
-    height: 90%;
+    height: 75%;
     display: grid;
+    background-color: rgb(46, 49, 47);
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(1,1fr);
 }
 .postInfo {
+    overflow: hidden;
     grid-column: 1;
-    grid-row:1
+    grid-row:1;
+    background-color: white;
+    margin-left:0.5em;
+    max-height: 100%;
 }
 .postPicture {
     grid-column: 2;
     height: 100%;
     width: 100%;
-    grid-row:1
+    grid-row:1;
+    margin-right:0.5em;
+    background-color: rgb(46, 49, 47);
+    overflow: hidden;
+
 }

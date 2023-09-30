@@ -6,6 +6,9 @@
     fill:none;
     stroke: #ddd
 }
+body{
+    font-family: 'Lobster';
+}
 
 .circle-progress {
     fill:none;

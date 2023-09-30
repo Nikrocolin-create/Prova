@@ -13,7 +13,9 @@ function Post() {
         <PostInfo postInfo={postInfo}/>
       </div>
       <div className={classes.postPicture}>
-        <img className={classes.imgClass} src="/img/forest.jpg" alt="Image of the post" />
+        <div style={{ maxHeight:"100%", marginRight:"0.5em", maxWidth:"100%"}}>
+          <img style={{ maxHeight:"100%", maxWidth:"100%", marginRight:"0.5em", objectFit: "contain"}} src="/img/forest.jpg" alt="Image of the post" />
+        </div>
       </div> 
     </div>
   )

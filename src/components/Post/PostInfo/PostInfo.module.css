@@ -1,7 +1,7 @@
 .postInfo{
     background-color: white;
-    height:100%;
-    width:100%;
+    max-height:100%;
+    max-width:100%;
     text-align: center;
 }
 
@@ -15,23 +15,33 @@
 
 .headerStyle {
     color: rgb(46, 49, 47);
-    font-size: 40;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
     width:100%;
     text-transform: uppercase;
 }
 .breakStyle {
-    padding-left: 30em;
-    padding-right: 30em;
+    margin-left: 18em;
+    margin-right: 18em;
     color: rgb(46, 49, 47);
-    width: 100%;
+    background-color:rgb(46, 49, 47) ;
     border-top: 1em solid rgb(46, 49, 47);
+    opacity: 1;
+    border-color: rgb(46, 49, 47);
 }
 
 .descriptionStyle {
     width:100%;
     text-align: center;
-    padding: 5em;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+    padding-left: 3em;
+    padding-right: 3em;
     font-size: 20;
+}
+
+.closeButton {
+    background-color: white;
+    border: 0px;
 }

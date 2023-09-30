@@ -1,0 +1,11 @@
+.colorFont {
+    font-size: 72px;
+    background: -webkit-linear-gradient(   
+      red 20%,
+    orange 20% 40%,
+    yellow 40% 60%,
+    green 60% 80%,
+    blue 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
