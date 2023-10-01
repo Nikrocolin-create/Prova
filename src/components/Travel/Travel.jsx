@@ -25,10 +25,7 @@ function Travel() {
   })
 
   function checkFunc(event) {
-    console.log(event.target.value)
-    console.log(parameters[event.target.value])
     parameters[event.target.value] = !parameters[event.target.value];
-    console.log(parameters[event.target.value])
     setParameters(parameters);
     setValue(value => value + 1);
   }

@@ -13,19 +13,27 @@ function getRandomInt(max) {
 export default function Dashboard() {
   let MOCK_DATA = [
     {clientId:"1",date:"", satisfaction:5, recommend:true,id:"1"},
-    {clientId:"1",date:"", satisfaction:6, recommend:true,id:"2"},
+    {clientId:"1",date:"", satisfaction:5, recommend:true,id:"2"},
     {clientId:"1",date:"", satisfaction:6, recommend:true,id:"3"},
-    {clientId:"2",date:"", satisfaction:10, recommend:false,id:"4"},
-    {clientId:"2",date:"", satisfaction:5, recommend:true,id:"5"},
-    {clientId:"2",date:"", satisfaction:5, recommend:true,id:"6"},
-    {clientId:"3",date:"", satisfaction:10, recommend:false,id:"7"},
+    {clientId:"2",date:"", satisfaction:1, recommend:false,id:"4"},
+    {clientId:"2",date:"", satisfaction:4, recommend:true,id:"5"},
+    {clientId:"2",date:"", satisfaction:1, recommend:true,id:"6"},
+    {clientId:"3",date:"", satisfaction:1, recommend:false,id:"7"},
     {clientId:"3",date:"", satisfaction:5, recommend:true,id:"8"},
     {clientId:"4",date:"", satisfaction:9, recommend:true,id:"9"},
-    {clientId:"5",date:"", satisfaction:10, recommend:true,id:"10"}
+    {clientId:"5",date:"", satisfaction:1, recommend:true,id:"10"}
   ]
   // for (let i = 0; i < 10; i++) {
   //   MOCK_DATA[i]["clientId"] = getRandomInt(10)
   // }
+  for (let i = 0; i < 10; i++) {
+    let date = new Date();
+    date.setDate(i)
+    
+    const options = {year: 'numeric', month: 'numeric', day: 'numeric' };
+    MOCK_DATA[i]["date"] = date.toLocaleDateString('en-us',options)
+  }
+  console.log(MOCK_DATA)
 
   return(
 <div className={classes.gridContainer}>
@@ -33,7 +41,7 @@ export default function Dashboard() {
 <div className={classes.chartContainer + " " + classes.chart2}> <Satisfied data={MOCK_DATA}/> </div>
 <div className={classes.chartContainer + " " + classes.chart3}> <Average data={MOCK_DATA}/></div>
 <div className={classes.chartContainer + " " + classes.chart4}><PieChartYear data={MOCK_DATA}/></div>
-<div className={classes.chartContainer + " " + classes.chart5}><TrendChart/></div>
+<div className={classes.chartContainer + " " + classes.chart5}><TrendChart data={MOCK_DATA}/></div>
 </div>
   );
 }

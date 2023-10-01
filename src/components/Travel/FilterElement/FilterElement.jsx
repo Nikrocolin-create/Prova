@@ -11,7 +11,7 @@ function FilterElement({parameters, checkFunc}) {
         <div style={{display:"flex",justifyContent:"center"}}>
             {
               Object.keys(parameters).map( key => {
-                return <FilterButton parameter={key} active={parameters[key]} checkFunc={checkFunc}/>
+                return <FilterButton key={key} parameter={key} active={parameters[key]} checkFunc={checkFunc}/>
               })
             }
         </div>

@@ -8,7 +8,6 @@ function PostInfo(postInfo) {
   const [grade, setGrade] = useState();
 
   function changeGradeFunc (target) {
-      console.log("New value - "+target.getAttribute("value"))
       setGrade(target.getAttribute("value"))
   }
   const [shownRate, setShownRate] = useState(false);

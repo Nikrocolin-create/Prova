@@ -10,12 +10,12 @@ function CircleProgressBar({percentage, circleWidth, responses}) {
             <svg 
             width={circleWidth * 0.95}
             height={circleWidth * 0.90} 
-            viewBox={`0 0 + ${circleWidth * 0.9} ${circleWidth * 0.9}`}>
+            viewBox={`0 0 ${circleWidth * 0.9} ${circleWidth * 0.9}`}>
 
-                <text x={circleWidth*0.37} y={circleWidth*0.3} font-size="15" fill="black">Top 2%</text>
-                <text x={circleWidth*0.35} y={circleWidth*0.45} font-size="30" fill="black">{percentage}%</text>
-                <text x={circleWidth*0.35} y={circleWidth*0.55} font-size="15" fill="black">At target</text>
-                <text x={circleWidth*0.45} y={circleWidth*0.65} font-size="15" fill="black">0</text>
+                <text x={circleWidth*0.37} y={circleWidth*0.3} fontSize="15" fill="black">Top 2%</text>
+                <text x={circleWidth*0.35} y={circleWidth*0.45} fontSize="30" fill="black">{percentage}%</text>
+                <text x={circleWidth*0.35} y={circleWidth*0.55} fontSize="15" fill="black">At target</text>
+                <text x={circleWidth*0.45} y={circleWidth*0.65} fontSize="15" fill="black">0</text>
                 <circle 
                 cx={(circleWidth*1.05)/2} 
                 cy={circleWidth*1.05/2} 
@@ -41,13 +41,13 @@ function CircleProgressBar({percentage, circleWidth, responses}) {
                 }}
                 transform={`rotate(-240 ${circleWidth/2} ${circleWidth/2})`}/>
             </svg>
-            <div style={{display:"block",textAlign:"center",width:circleWidth*0.8,paddingLeft:"10px",paddingRight:"10px",margin:"auto"}} >
-                {/* <div style={{display:"flex", justifyContent:"space-between"}}> */}
-                    <span style={{float:"left"}}>0%</span>
-                    <span style={{float:"right"}}>100%</span>
-                    <h6 style={{paddingTop:"20px",paddingLeft:"20px"}}>Responses</h6>
-                    <h6 style={{}}>{responses}</h6>
-                {/* </div> */}
+            <div style={{display:"flex",justifyContent:"space-between",textAlign:"center",width:circleWidth*0.8,paddingLeft:"10px",paddingRight:"10px",margin:"auto"}} >
+                    <span>0%</span>
+                    <span>100%</span>
+            </div>
+            <div style={{textAlign:"center"}}>
+                <h6>Responses</h6>
+                <h4 style={{}}>{responses}</h4>
             </div>
             <div style={{display:"block",textAlign:"center",width:circleWidth*0.8,paddingLeft:"10px",paddingRight:"10px",margin:"auto"}} >
 

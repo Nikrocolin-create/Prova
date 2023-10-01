@@ -1,5 +1,11 @@
 .login-wrapper {
     display: flex;
+    height:100%;
     flex-direction: column;
     align-items: center;
+}
+
+.login-wrapper > form {
+    background-color: rgb(198, 198, 241);
+    padding:1em;
 }

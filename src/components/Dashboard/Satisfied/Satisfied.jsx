@@ -8,12 +8,16 @@ function Satisfied({data}) {
   return (
     <div>
       <h6><b>Satisfied</b></h6>
-      <div style={{textAlign:"center", padding:"0", margin:"0"}}>
+      <div style={{display:"flex",justifyContent:"center",alignItems:"top", padding:"0", margin:"0"}}>
           <h1 className={classes.colorFont} 
           style={{background:`linear-gradient(to top, ${GREY_COLOR} 19%,${BLUE_COLOR} 19% ${blue}%,${GREY_COLOR} ${blue}%)`,
                   WebkitBackgroundClip:"text",
                   WebkitTextFillColor:"transparent",
-                  padding:"0", margin:"0"}}><b>{percent}</b><b style={{fontSize:"30px",marginBottom:"100px"}}>%</b></h1>
+                  padding:"0", margin:"0"}}><b>{percent}</b></h1>
+          <h1 style={{background:`linear-gradient(to top, ${GREY_COLOR} 19%,${BLUE_COLOR} 19% ${blue}%,${GREY_COLOR} ${blue}%)`,
+                  WebkitBackgroundClip:"text",
+                  WebkitTextFillColor:"transparent",
+                   paddingTop:"0.25em"}}><b style={{fontSize:"30px"}}>%</b></h1>
           {/* <p className={classes.colorFont} 
           style={{background:`linear-gradient( grey 40%,blue 40% 80%,grey 80%)`,
                   WebkitBackgroundClip:"text",

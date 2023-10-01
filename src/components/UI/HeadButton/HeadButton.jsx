@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 function HeadButton({parameter}) {
   return (
-    <li key={parameter.link}>
-        <Link to={parameter.link} className={classes.headLink+" nav-link"} aria-current="page"  >{parameter.name}</Link>
+    <li key={parameter.id}>
+        <Link key={parameter.link} to={parameter.link} className={classes.headLink+" nav-link"} aria-current="page"  >{parameter.name}</Link>
     </li>
   )
 }

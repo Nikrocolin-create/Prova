@@ -12,7 +12,7 @@ function Header({buttons}) {
         <ul className="navbar-nav">
         {
           buttons.map( (parameter) => {
-            return <HeadButton parameter={parameter}/>
+            return <HeadButton key={parameter.id} parameter={parameter}/>
           })
         }
       </ul>

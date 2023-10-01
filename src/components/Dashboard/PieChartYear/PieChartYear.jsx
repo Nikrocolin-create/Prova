@@ -1,9 +1,8 @@
 import React from 'react'
 import { Chart } from "react-google-charts";
-
+import DownloadButton from '../../UI/DownloadButton/DownloadButton';
 function PieChartYear({data}) {
     let result = Object.groupBy([...data], ({ clientId }) => clientId);
-    console.log(result)
     let pie_data = [
         ["Group", "Flights per year"],
         ["6+ times a year", 0],
@@ -12,10 +11,7 @@ function PieChartYear({data}) {
         ["Twice a year", 0],
         ["One time a year", 0],
     ]
-    console.log(Object.keys(result))
     for (let key of Object.keys(result)) {
-        console.log("Key -"+key)
-        console.log("Length -"+pie_data[key].length)
         if ( result[key].length > 5) {
             pie_data[1][1]++
         } else if (result[key].length > 3) {
@@ -31,7 +27,6 @@ function PieChartYear({data}) {
     for(let obj of pie_data) {
         obj[0] = obj[0]+" (N="+obj[1]+")"
     }
-    console.log(pie_data)
 
     const data1 = [
         ["Task", "Hours per Day"],
@@ -48,7 +43,10 @@ function PieChartYear({data}) {
       };
   return (
     <div style={{height:"90%"}}>
+      <div style={{display:"flex", justifyContent:"space-between"}}>
         <h6><b>Flight frequency breakdown</b></h6>
+        <DownloadButton />
+      </div>
         <Chart
         chartType="PieChart"
         data={pie_data}

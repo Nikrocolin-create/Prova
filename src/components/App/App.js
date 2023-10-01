@@ -14,10 +14,9 @@ function App() {
   if(!token) {
     return <Login setToken={setToken} />
   }
-  const headerButtons = [{"name":"FIRST","link":"/"},
-                         {"name":"SECOND","link":"/travel"},
-                         {"name":"test","link":"/test"},
-                         {"name":"THIRD","link":"/dashboard"}]
+  const headerButtons = [{"id":1,"name":"FIRST","link":"/"},
+                         {"id":2,"name":"SECOND","link":"/travel"},
+                         {"id":3,"name":"THIRD","link":"/dashboard"}]
   return (
     <div className="wrapper" style={{height:"100vh"}}>
     <BrowserRouter>
@@ -26,7 +25,6 @@ function App() {
         <Route path="/" Component={DigitalFeedback}/>
         <Route path="/travel" Component={Travel}/>
         <Route path="/dashboard" Component={Dashboard}/>
-        <Route path="/test" Component={Test}/>
       </Routes>
     </BrowserRouter>
   </div>

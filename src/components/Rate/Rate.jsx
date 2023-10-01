@@ -4,12 +4,6 @@ import classes from "./Rate.module.css"
 import SubmitButton from './SubmitButton/SubmitButton'
 
 function Rate({currentValue, selectFunc, postId}) {
-  console.log("currentValue")
-  console.log(currentValue)
-    // console.log("postId")
-    // console.log(postId)
-    // console.log("selectFunc")
-    // console.log(selectFunc)
   let numbers = []
   for(let i =1; i < 11; i++) {
      numbers.push(i);
@@ -36,7 +30,7 @@ function Rate({currentValue, selectFunc, postId}) {
         <div style={{display:"flex"}}>
         {numbers.map((num)=>{
             let active = currentValue == num;
-            return <RateButton selectFunc={selectFunc} active={active} number={num}/>
+            return <RateButton key={num} selectFunc={selectFunc} active={active} number={num}/>
         }) }
         </div>
         <div className={classes.buttonClass}>
