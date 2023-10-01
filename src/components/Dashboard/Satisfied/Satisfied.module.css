@@ -1,6 +1,6 @@
 .colorFont {
     padding: 0;
-    font-size: 172px;
+    font-size: 110px;
     font-family: "Gill Sans Extrabold";
     background: linear-gradient(
         grey 20%,
@@ -9,4 +9,22 @@
       );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.smallRate {
+  opacity:0.7;
+  width: 6%;
+}
+.bigRate {
+  width: 10%;
+}
+.viewTrendButton {
+  background-color: rgb(57,167, 57);
+  color: white;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top:0.4em;
+  padding-bottom:0.4em;
+  margin-top: 0.5em;
+  border: 0px;
 }

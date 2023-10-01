@@ -33,7 +33,7 @@ function Average({data}) {
   <svg><use xlinkHref="#fivestars"/></svg>
 </div>
 <h2>{rating}</h2>
-<p style={{fontSize:"7px"}}>Responses: {responses}</p>
+<p style={{fontSize:"14px"}}>Responses: {responses}</p>
 <h6 style={{color:"green"}}>KEY DRIVERS</h6>
     </div>
   )
