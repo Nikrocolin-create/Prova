@@ -28,29 +28,7 @@ export default function Dashboard() {
   
     fetchUserData()
   }, [])
-  // let MOCK_DATA = [
-  //   {clientId:"1",date:"", satisfaction:5, recommend:true,id:"1"},
-  //   {clientId:"1",date:"", satisfaction:6, recommend:true,id:"2"},
-  //   {clientId:"1",date:"", satisfaction:6, recommend:true,id:"3"},
-  //   {clientId:"2",date:"", satisfaction:10, recommend:false,id:"4"},
-  //   {clientId:"2",date:"", satisfaction:5, recommend:true,id:"5"},
-  //   {clientId:"2",date:"", satisfaction:5, recommend:true,id:"6"},
-  //   {clientId:"3",date:"", satisfaction:10, recommend:false,id:"7"},
-  //   {clientId:"3",date:"", satisfaction:5, recommend:true,id:"8"},
-  //   {clientId:"4",date:"", satisfaction:9, recommend:true,id:"9"},
-  //   {clientId:"5",date:"", satisfaction:10, recommend:true,id:"10"}
-  // ]
-  // // for (let i = 0; i < 10; i++) {
-  // //   MOCK_DATA[i]["clientId"] = getRandomInt(10)
-  // // }
-  // for (let i = 0; i < 10; i++) {
-  //   let date = new Date();
-  //   date.setDate(i)
-    
-  //   const options = {year: 'numeric', month: 'numeric', day: 'numeric' };
-  //   MOCK_DATA[i]["date"] = date.toLocaleDateString('en-us',options)
-  // }
-  // console.log(MOCK_DATA)
+
   if (dashoboardData.length > 0) {
     return(
       <div className={classes.gridContainer}>
@@ -68,19 +46,3 @@ export default function Dashboard() {
   }
 
 }
-
-//import { PieChart } from '@mui/x-charts';
-// import Highcharts from 'highcharts'
-// import HighchartsReact from 'highcharts-react-official'
-// const options = {
-//   title: {
-//     text: 'My chart'
-//   },
-//   series: [{
-//     data: [1, 2, 3]
-//   }]
-// }
-// {/* <HighchartsReact
-// highcharts={Highcharts}
-// options={options}
-// /> */}
